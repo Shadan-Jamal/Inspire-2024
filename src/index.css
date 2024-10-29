@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Traxtor';
+    src: url('./fonts/TRAXTOR.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stranger';
+    src: url('./fonts/Stranger.ttf');
+    font-weight: lighter;
+    font-style: oblique;
+}
+
+.header-font{
+    font-family : 'Traxtor',sans-serif ;
+    font-style: normal;
+}
+
+.para-font{
+    font-family: 'Stranger';
+}
+
+body{
+    background-image: url('/dotted-black-wall.jpg');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: repeat-x repeat-y;
+    background-color: rgba(0, 0, 0, 0.852);
+    background-blend-mode: darken;
+    overflow-x: hidden;
+}
+
+.icon-shadow{
+    filter: drop-shadow(3px 3px 3px 3px rgb(248, 126, 26));
+}
+
+#logo-img{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url('/horrorpostercollage.webp');
+    transition: all 100ms ease-in-out;
+    cursor: default;
+}
+
+#logo-img:hover{
+    filter: drop-shadow(0px 0px 5px rgb(242, 30, 30));
+}
+
+#navbar{
+    /* background-color : rgba(0,0,0,0.5); */
+    backdrop-filter: blur(10px);
+}

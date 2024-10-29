@@ -19,7 +19,7 @@ function Hero() {
   
         // Calculate new rotation based on X and tilt based on Y
         const newRotation = xPercent * 35; // Max rotation ±35 degrees
-        const newTilt = yPercent * 35; // Max tilt ±35 degrees
+        const newTilt = yPercent * 30; // Max tilt ±35 degrees
     
         // Animate left and right eyelids based on the cursor
         animate(leftLidRef.current, { rotate: newRotation, skewY: newTilt }, { duration: 0.1} );
@@ -89,7 +89,7 @@ function Hero() {
       <div className="md:block md:col-span-2 h-full relative">
         <div className='absolute top-1/2 left-[35%] -translate-x-1/2 -translate-y-[50%] w-1/2 h-72 flex justify-center'>
         <motion.div
-        ref={leftLidRef}
+        ref={rightLidRef}
         className='rounded-full absolute top-14 bg-white w-[70%] h-3'
         >
         </motion.div>

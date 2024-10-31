@@ -65,15 +65,6 @@
   animation-play-state: paused;
 }
 
-#sliding-images img {
-  transition: width 500ms ease, brightness 500ms ease;
-}
-
-#sliding-images img:hover {
-  opacity: 1;
-  width: 208px;
-}
-
 @keyframes slide {
   0% {
     transform: translateX(0);

@@ -7,7 +7,9 @@ import { LazyLoadImage } from 'react-lazy-load-image-component';
 const ImageSlider = () => {
   const [mainImage, setMainImage] = useState('./Images/1.jpg'); // Default main image
   const isPresent = useIsPresent();
+
   const handleImageClick = (e) => {
+    e.preventDefault();
     const clickedImageSrc = e.target.getAttribute('src');
     setMainImage((prevImage) => {
       e.target.setAttribute('src', prevImage);
@@ -41,15 +43,15 @@ const ImageSlider = () => {
         >
           <div
             id="sliding-images"
-            className="relative flex flex-row gap-3 mb-7 w-full"
+            className="relative flex flex-row gap-3 mb-7 w-full *:hover:opacity-0"
           >
             {Array.from({ length: 38 }).map((_, index) => (
               <LazyLoadImage
                 // effect='blur'
-                key={index}
+                key={`img-${index}`}
                 loading='lazy'
                 src={`./Images/${(index % 38) + 2}.jpg`}
-                className="w-20 h-32 object-cover rounded-md images opacity-50 hover:opacity-0"
+                className="w-10 lg:w-20 h-32 object-cover rounded-md images opacity-50 hover:w-[208px] transition-[width,brightness] duration-500 ease-in-out"
                 onClick={handleImageClick}
                 onTouchStart={handleImageClick}
               />

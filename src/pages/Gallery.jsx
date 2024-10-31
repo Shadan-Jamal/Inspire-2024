@@ -37,7 +37,7 @@ const ImageSlider = () => {
         {/* Sliding Images Section */}
         <div
           id="slide-path"
-          className="absolute start-1/4 bottom-0 z-20 w-6/12 overflow-hidden"
+          className="absolute lg:start-1/4 bottom-0 z-20 w-full lg:w-6/12 overflow-hidden"
         >
           <div
             id="sliding-images"

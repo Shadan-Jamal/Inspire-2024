@@ -29,7 +29,7 @@ const ImageSlider = () => {
             src={mainImage}
             alt="main"
             loading='lazy'
-            className="w-screen h-screen object-contain"
+            className="w-screen h-screen object-contain brightness-[0.65] lg:brightness-100"
             id="main-image"
           />
         </div>

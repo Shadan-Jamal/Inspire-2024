@@ -38,7 +38,7 @@ function Hero() {
     initial={{opacity : 0}}
     animate={{opacity : 1}}
     exit={{opacity : 0}}
-    transition={{duration : 2, ease : 'easeOut'}}
+    transition={{duration : 2.4, ease : 'easeOut'}}
     className="w-screen h-screen grid grid-cols-1 md:grid-cols-8">
       {/* Left Side */}
       <div className="md:block md:col-span-2 h-full relative ">
@@ -110,7 +110,7 @@ function Hero() {
     {!isPresent && <motion.div
       initial={{display : 'none'}}
       animate={{display : 'block'}}
-      transition={{ease : 'easeIn', duration : 3}}
+      transition={{ease : 'easeIn', duration : 2}}
       className='absolute inset-0'
       >
       <Bats/>

@@ -91,15 +91,17 @@
   }
 
   #sliding-images {
-    animation: slide 50s linear infinite;
+    animation: slide 80s linear infinite;
   }
 
   #sliding-images img {
-    width: 160px; 
-    height: 120px;
+    width: 120px; 
+    height: 80px;
+    cursor:pointer;
   }
-
+  
   #sliding-images img:hover {
+    cursor:pointer;
     width: 180px; 
   }
 

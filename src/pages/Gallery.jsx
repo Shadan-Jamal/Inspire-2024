@@ -51,6 +51,7 @@ const ImageSlider = () => {
                 src={`./Images/${(index % 38) + 2}.jpg`}
                 className="w-20 h-32 object-cover rounded-md images opacity-50 hover:opacity-0"
                 onClick={handleImageClick}
+                onTouchStart={handleImageClick}
               />
             ))}
             {['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg'].map((item,index) => {

@@ -91,7 +91,7 @@
   }
 
   #sliding-images {
-    animation: slide 30s linear infinite;
+    animation: slide 50s linear infinite;
   }
 
   #sliding-images img {
@@ -108,7 +108,7 @@
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-480px * 5));
+      transform: translateX(calc(-1300px * 5));
     }
   }
 }

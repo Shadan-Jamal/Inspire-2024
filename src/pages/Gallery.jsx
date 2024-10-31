@@ -64,6 +64,7 @@ const ImageSlider = () => {
           }
           </div>
         </div>
+        
       </motion.section>
       {!isPresent && <motion.div
       initial={{display : 'none'}}

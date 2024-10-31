@@ -32,7 +32,7 @@ body{
     background-repeat: repeat-x repeat-y;
     background-color: rgba(0, 0, 0, 0.852);
     background-blend-mode: darken;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .icon-shadow{

@@ -5,7 +5,7 @@ function Bats() {
     <div
     className='w-screen h-screen'
     >
-      <video autoPlay src="/bats.mp4" muted className='w-full h-full object-fill bg-black/80 mix-blend-multiply'>
+      <video autoPlay src="/bats.mp4" muted className='w-full h-full object-cover bg-black/80 mix-blend-multiply'>
       </video>
     </div>
   )

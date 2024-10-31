@@ -56,7 +56,7 @@ function About() {
       <div className="mt-8 row-span-3 w-screen h-[75%] flex flex-col justify-evenly items-center gap-10 lg:px-6 relative">
         {/* Left Content Section */}
         {click && (<motion.div ref={box1}
-        className="w-full h-1/2 flex flex-row justify-end items-center px-3 lg:px-6 gap-10 border">
+        className="w-full h-1/2 flex flex-row justify-end items-center px-3 lg:px-6 gap-10 ">
             <motion.div
               id="img-1"
               initial={{ x: 100, opacity: 0 }}
@@ -68,9 +68,9 @@ function About() {
             <motion.div
             id="para-1" 
             initial={{ x: -100, opacity: 0 }} 
-            exit={{x : '300vw'}}
+            exit={{x : '300vw' , transition : {ease  : 'circInOut'}}}
             className="w-1/2 h-fit">
-              <motion.p className="text-balance  lg:leading-7 text-slate-500 text-sm lg:text-[40px] text-start lg:p-3 para-font">
+              <motion.p className="text-balance  lg:leading-7 text-slate-500 text-sm lg:text-[50px] text-start lg:p-3 para-font">
                 The Computer Science Department is proud to present Inspire 2k24, an exciting intra-departmental
                 fest designed to ignite creativity, foster innovation, and challenge the technical wits of students. Inspire isn't just a festival—it’s a platform for growth, experimentation, and skill development, where students can step beyond the classroom to experience the thrill of competitive learning.
                 <br />
@@ -93,15 +93,16 @@ function About() {
         </motion.span>
 
         {/* Right Content Section */}
-        {click && (<motion.div ref={box2} className="w-full h-1/2 flex flex-row justify-end items-center gap-12 px-3 lg:px-10 border"> 
+        {click && (<motion.div ref={box2} className="w-full h-1/2 flex flex-row justify-end items-center gap-12 px-3 lg:px-10 "> 
             <motion.div initial={{ x: 100, opacity: 0 }} exit={{x : '-300vw'}} id="para-2" className="w-1/2 h-fit">
-              <motion.p className="text-balance lg:leading-8 text-slate-500 text-sm lg:text-[40px] text-end lg:p-3 para-font">
+              <motion.p className="text-balance lg:leading-8 text-slate-500 text-sm lg:text-[50px] text-end lg:p-3 para-font">
                 Inspire 2k24 is more than just a competition—it’s an incubator for ideas and an opportunity to build connections with other budding technologists. Every event is carefully curated to test critical thinking, analytical abilities, and technical skills, ensuring that participants leave with not just trophies but valuable insights and a refined skillset.
                 <br />
                 So gear up for an exhilarating experience at Inspire 2k24—a festival that celebrates the spirit of
                 technology, challenges your limits, and prepares you for the future.
               </motion.p>
             </motion.div>
+
             <motion.div
               initial={{ x: -100, opacity: 0 }}
               exit={{x : ['50vw','300vw']}}

@@ -55,4 +55,5 @@ body{
 #navbar{
     /* background-color : rgba(0,0,0,0.5); */
     backdrop-filter: blur(10px);
+    transition: backdrop-filter 1500ms ease-in-out;
 }

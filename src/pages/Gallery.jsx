@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../Gallery.css'; // Include your custom CSS styles if needed
-import Bats from './Bats';
+import Bats from '../components/Bats';
 import {motion, useIsPresent } from 'framer-motion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 const ImageSlider = () => {
   const [mainImage, setMainImage] = useState('./Images/1.jpg'); // Default main image
   const isPresent = useIsPresent();
@@ -15,7 +16,6 @@ const ImageSlider = () => {
   };
 
   return (
-    window.innerWidth > 700 ? 
     <main className="bg-black h-screen w-screen">
       <motion.section 
       initial={{opacity : 0}}
@@ -29,7 +29,7 @@ const ImageSlider = () => {
             src={mainImage}
             alt="main"
             loading='lazy'
-            className="w-screen h-screen object-cover"
+            className="w-screen h-screen object-contain"
             id="main-image"
           />
         </div>
@@ -74,12 +74,7 @@ const ImageSlider = () => {
         <Bats/>
       </motion.div>
       } 
-    </main> :
-      <main className='w-screen h-screen flex justify-center items-center text-white text-6xl header-font'>
-        <p className='text-wrap'>
-          Switch to landscape mode
-        </p>
-      </main>
+    </main>
   );
 };
 

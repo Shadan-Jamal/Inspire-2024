@@ -1,13 +1,12 @@
 import React, {useEffect,useRef } from 'react';
 import { motion, useAnimate,useIsPresent } from 'framer-motion';
-import Slider from './Slider'
-import Bats from './Bats'
+import Slider from '../components/Slider'
+import Bats from '../components/Bats'
 function Hero() {
     const [scope, animate] = useAnimate();
     const leftLidRef = useRef(null);
     const rightLidRef = useRef(null);
     const isPresent = useIsPresent();
-    console.log(isPresent)
 
     useEffect(() => {
       const handleMouseMove = (event) => {

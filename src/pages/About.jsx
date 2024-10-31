@@ -13,7 +13,8 @@ function About() {
     await animate(scope.current ,
       {width : '35%' ,height : 1, padding : 0},
       { duration: 0.4, ease: 'circInOut', type: 'spring', stiffness : 100}
-  )
+    )
+
     await animate(
       scope.current,
       { rotate: 90, width: '30%', height : 1, padding : 0},
@@ -41,13 +42,13 @@ function About() {
       exit={{scale : 0}}
       transition={{duration : 0.5, type : 'keyframes'}}
       className="w-full h-[25%] text-center row-span-1 flex flex-col justify-center items-center mt-24">
-        <h1 className="header-font text-red-600 text-[70px]">About</h1>
+        <h1 className="header-font text-red-600 text-[50px] lg:text-[70px]">About</h1>
         <motion.div
         initial={{width:0}}
         animate={{width : '100%'}}
         transition={{duration : 2, type: 'tween' , ease:'circInOut'}}
         className='w-full flex flex-row justify-center gap-5 shadow-2xl shadow-white'>
-          <motion.span className='bg-red-700 h-[1px] w-[500px] rounded-lg'></motion.span>
+          <motion.span className='bg-red-700 h-[1px] w-[300px] lg:w-[500px] rounded-lg'></motion.span>
         </motion.div>
       </motion.div>
 

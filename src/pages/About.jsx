@@ -88,6 +88,7 @@ function About() {
         whileHover={{opacity : 0.5 , cursor : 'default'}}
           ref={scope}
           onClick={clicked}
+          onTouchStart={clicked}
           className="absolute bg-white p-2 rounded-full header-font text-2xl">
           {!click && 'Click'}
         </motion.span>

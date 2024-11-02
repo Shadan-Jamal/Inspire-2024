@@ -40,12 +40,12 @@ body{
 }
 
 #logo-img{
+    background : url('/public/logo-background.png');
+    transition: all 300ms linear;
+    cursor: default;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    background-image: url('/horrorpostercollage.webp');
-    transition: all 100ms ease-in-out;
-    cursor: default;
 }
 
 #logo-img:hover{

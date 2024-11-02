@@ -1,8 +1,9 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './pages/Hero'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
+import Events from './pages/Events'
 import {ReactLenis} from 'lenis/react'
 import { Routes , Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
@@ -17,6 +18,7 @@ function App() {
               <Route path='/' element={<Hero />} />
               <Route path='/gallery' element={<Gallery />}/>
               <Route path='/about' element={<About />}/>
+              <Route path='/events' element={<Events />}/>
           </Routes>
         </AnimatePresence>
       </ReactLenis>

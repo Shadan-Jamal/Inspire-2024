@@ -33,9 +33,9 @@ function Navbar() {
   return (<>
   <motion.div 
     id='navbar'
-    className='fixed top-0 w-screen h-16 lg:px-10 flex flex-row justify-around items-center text-white z-[100]'>
+    className='fixed top-0 w-screen h-16 lg:px-10 flex flex-row justify-around items-center text-white z-[100] px-10'>
         <div 
-        className={`justify-self-start w-[50%] lg:w-[25%] header-font text-[30px]`}>
+        className={`justify-self-start w-[50%] lg:w-[25%] header-font text-[30px] `}>
             <h1>Inspire</h1>
         </div>
 
@@ -98,7 +98,7 @@ function Navbar() {
                     </motion.a>
                     </NavLink>
 
-                    <NavLink to={"/"}>
+                    <NavLink to={"/events"}>
                     <motion.a 
                     onMouseEnter={() => setHovering({...hovering,link4 : true})}
                     onMouseLeave={() => setHovering({...hovering,link4 : false})}
@@ -137,7 +137,7 @@ function Navbar() {
             </AnimatePresence>
         </div>}    
 
-    <motion.div className={`w-[50%] lg:w-[25%] flex justify-end absolute lg:relative`}>
+    <motion.div className={`w-[50%] lg:w-[25%] flex justify-end lg:relative `}>
         <motion.div className='w-10 h-10'
         onClick={navClicked}
         >
@@ -148,7 +148,7 @@ function Navbar() {
 
 {window.innerWidth < 800 && <div
     id={`${nav && 'navbar'}`} 
-    className='w-screen h-screen bg-transparent absolute z-[99]'>
+    className='w-screen h-screen bg-transparent absolute z-[99] '>
         <motion.div
         initial={{opacity : 0}}
         animate={{opacity:1}}

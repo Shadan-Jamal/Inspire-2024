@@ -9,27 +9,28 @@ function Hero() {
     const isPresent = useIsPresent();
 
     useEffect(() => {
-      const handleMouseMove = (event) => {
-        const { clientX, clientY } = event;
-
-        // Calculate percentage position relative to the screen
-        const xPercent = (clientX / window.innerWidth) * 2 - 1; // Range: -1 to 1
-        const yPercent = (clientY / window.innerHeight) * 2 - 1; // Range: -1 to 1
+      if(window.innerWidth > 783){
+        const handleMouseMove = (event) => {
+          const { clientX, clientY } = event;
   
-        // Calculate new rotation based on X and tilt based on Y
-        const newRotation = xPercent * 35; // Max rotation ±35 degrees
-        const newTilt = yPercent * 30; // Max tilt ±35 degrees
+          // Calculate percentage position relative to the screen
+          const xPercent = (clientX / window.innerWidth) * 2 - 1; // Range: -1 to 1
+          const yPercent = (clientY / window.innerHeight) * 2 - 1; // Range: -1 to 1
     
-        // Animate left and right eyelids based on the cursor
-        animate(leftLidRef.current, { rotate: newRotation, skewY: newTilt }, { duration: 0.1} );
-        animate(rightLidRef.current, { rotate: -newRotation, skewY: -newTilt }, { duration: 0.2 });
-      };
-  
-      // Add mousemove event listener
-      window.addEventListener('mousemove', handleMouseMove);
-  
+          // Calculate new rotation based on X and tilt based on Y
+          const newRotation = xPercent * 35; // Max rotation ±35 degrees
+          const newTilt = yPercent * 30; // Max tilt ±35 degrees
+      
+          // Animate left and right eyelids based on the cursor
+          animate(leftLidRef.current, { rotate: newRotation, skewY: newTilt }, { duration: 0.1} );
+          animate(rightLidRef.current, { rotate: -newRotation, skewY: -newTilt }, { duration: 0.2 });
+        };
+    
+        // Add mousemove event listener
+        window.addEventListener('mousemove', handleMouseMove);
+        return () => window.removeEventListener('mousemove', handleMouseMove);
+      }
       // Cleanup event listener on unmount
-      return () => window.removeEventListener('mousemove', handleMouseMove);
     }, [animate]);
 
   return (
@@ -41,7 +42,7 @@ function Hero() {
     transition={{duration : 2.4, ease : 'easeOut'}}
     className="w-screen h-screen grid grid-cols-1 md:grid-cols-8">
       {/* Left Side */}
-      <div className="md:block md:col-span-2 h-full relative ">
+      {window.innerWidth > 780 && <div className="md:block md:col-span-2 h-full relative ">
         <div className='absolute top-1/2 left-[65%] -translate-x-1/2 -translate-y-[50%] w-1/2 h-72 flex justify-center'>
         <motion.div
         ref={leftLidRef}
@@ -61,7 +62,7 @@ function Hero() {
               </div>
           </div>
         </div>
-      </div>
+      </div>}
 
       {/* Logo Section */}
       <div className="col-span-4 flex flex-col justify-evenly items-center" id='logo'>
@@ -72,20 +73,18 @@ function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className=""
           >
-          <p
-            className="text-[clamp(48px,_10vw,_220px)] 
-            header-font text-red-700"
-            id='logo-img'
+          <p id='logo-img'
+            className="text-[clamp(68px,_10vw,_220px)] 
+            header-font text-red-800"
             >
             Inspire 2k24
           </p>
         </motion.div>
-
         <Slider />
       </div>
 
       {/* Right Side */}
-      <div className="md:block md:col-span-2 h-full relative">
+      {window.innerWidth > 780 && <div className="md:block md:col-span-2 h-full relative">
         <div className='absolute top-1/2 left-[35%] -translate-x-1/2 -translate-y-[50%] w-1/2 h-72 flex justify-center'>
         <motion.div
         ref={rightLidRef}
@@ -105,7 +104,7 @@ function Hero() {
               </div>
           </div>
         </div>
-      </div>
+      </div>}
     </motion.section>
     {!isPresent && <motion.div
       initial={{display : 'none'}}

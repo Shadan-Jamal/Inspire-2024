@@ -74,8 +74,8 @@ function Hero() {
           className=""
           >
           <p id='logo-img'
-            className="text-[clamp(68px,_10vw,_220px)] 
-            header-font text-red-800"
+            className="text-[clamp(128px,_10vw,_220px)] 
+            header-font text-red-300"
             >
             Inspire 2k24
           </p>

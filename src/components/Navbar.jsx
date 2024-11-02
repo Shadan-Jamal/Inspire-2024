@@ -164,7 +164,7 @@ function Navbar() {
                 {nav && <>
                 <motion.div
                 initial={{x : '100vw'}} exit={{x : '-100vw'}} className='w-full h-[25%] flex justify-center items-center '>
-                    <h2 className='text-red-500 text-3xl'>
+                    <h2 className='text-red-300 text-3xl'>
                         <NavLink to="/" onClick={() => openNav(false)}>
                             Home
                         </NavLink>
@@ -173,7 +173,7 @@ function Navbar() {
 
                 <motion.div
                 initial={{x : '-100vw'}} exit={{x : '100vw'}} className='w-full h-[25%] flex justify-center items-center '>
-                    <h2 className='text-red-600 text-3xl'>
+                    <h2 className='text-red-400 text-3xl'>
                     <NavLink to="/gallery" onClick={() => openNav(false)}>
                         Gallery
                     </NavLink>
@@ -182,7 +182,7 @@ function Navbar() {
 
                 <motion.div
                 initial={{x : '100vw'}} exit={{x : '-100vw'}} className='w-full h-[25%] flex justify-center items-center '>
-                    <h2 className='text-red-700 text-3xl'>
+                    <h2 className='text-red-500 text-3xl'>
                     <NavLink to="/about" onClick={() => openNav(false)}>
                         About
                     </NavLink>
@@ -191,7 +191,7 @@ function Navbar() {
 
                 <motion.div
                 initial={{x : '-100vw'}} exit={{x : '100vw'}} className='w-full h-[25%] flex justify-center items-center '>
-                    <h2 className='text-red-800 text-3xl'>
+                    <h2 className='text-red-600 text-3xl'>
                     <NavLink to="/" onClick={() => openNav(false)}>
                         Events
                     </NavLink>
@@ -200,8 +200,8 @@ function Navbar() {
 
                 <motion.div
                 initial={{x : '100vw'}} exit={{x : '-100vw'}} className='w-full h-[25%] flex justify-center items-center '>
-                    <h2 className='text-red-900 text-3xl'>
-                    <NavLink to="/" onClick={() => openNav(false)}>
+                    <h2 className='text-red-700 text-3xl'>
+                    <NavLink to="/events" onClick={() => openNav(false)}>
                         Registration
                     </NavLink>
                     </h2>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../Gallery.css'; // Include your custom CSS styles if needed
+import '../Gallery.css';
 import Bats from '../components/Bats';
 import {motion, useIsPresent } from 'framer-motion';
 import { LazyLoadImage } from 'react-lazy-load-image-component';

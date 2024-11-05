@@ -40,7 +40,7 @@ body{
 }
 
 #logo-img{
-    background : url('/public/logo-background.png');
+    background : url('/logo-background.png');
     transition: all 300ms linear;
     cursor: default;
     background-clip: text;

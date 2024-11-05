@@ -17,6 +17,12 @@ const ImageSlider = () => {
     });
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+
+    },3000)
+  },[])
+
   return (
     <main className="bg-black h-screen w-screen">
       <motion.section 
@@ -39,7 +45,7 @@ const ImageSlider = () => {
         {/* Sliding Images Section */}
         <div
           id="slide-path"
-          className="absolute lg:start-1/4 bottom-0 z-20 w-full lg:w-6/12 overflow-hidden"
+          className="absolute lg:start-1/4 bottom-0 z-20 w-full lg:w-6/12 overflow-hidden border-4 border-black"
         >
           <div
             id="sliding-images"
@@ -50,10 +56,10 @@ const ImageSlider = () => {
                 // effect='blur'
                 key={`img-${index}`}
                 loading='lazy'
-                src={`./Images/${(index % 38) + 2}.jpg`}
-                className="w-10 lg:w-20 h-32 object-cover rounded-md images opacity-50 hover:w-[208px] transition-[width,brightness] duration-500 ease-in-out"
+                src={`./Images/${(index) + 1}.jpg`}
+                className="w-5 lg:w-20 h-32 object-cover rounded-md images opacity-50 lg:hover:w-[208px] transition-[width,brightness] duration-500 ease-in-out"
                 onClick={handleImageClick}
-                onTouchStart={handleImageClick}
+                onTouchEnd={handleImageClick}
               />
             ))}
             {['1.jpg','2.jpg','3.jpg','4.jpg','5.jpg','6.jpg','7.jpg','8.jpg'].map((item,index) => {

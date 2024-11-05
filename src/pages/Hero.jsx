@@ -74,8 +74,8 @@ function Hero() {
           className=""
           >
           <p id='logo-img'
-            className="text-[clamp(128px,_10vw,_220px)] 
-            header-font text-red-300"
+            className="text-[clamp(88px,_10vw,_220px)] 
+            header-font text-red-300 text-wrap text-center  "
             >
             Inspire 2k24
           </p>
@@ -109,7 +109,7 @@ function Hero() {
     {!isPresent && <motion.div
       initial={{display : 'none'}}
       animate={{display : 'block'}}
-      transition={{ease : 'easeIn', duration : 2}}
+      // transition={{ease : 'easeIn', duration : 2}}
       className='absolute inset-0'
       >
       <Bats/>

@@ -11,13 +11,13 @@ function About() {
   const clicked = async () => {
     setClick(true);
     await animate(scope.current ,
-      {width : '35%' ,height : 1, padding : 0},
+      {width : `${window.innerWidth < 600 ? '50%' : '35%'}` ,height : 1, padding : 0},
       { duration: 0.4, ease: 'circInOut', type: 'spring', stiffness : 100}
     )
 
     await animate(
       scope.current,
-      { rotate: 90, width: '30%', height : 1, padding : 0},
+      { rotate: 90, width: `${window.innerWidth < 600 ? '70%' : '35%'}`, height : 1, padding : 0},
       { delay : 0.1, duration: 0.7, ease: 'circOut'}
     );
 
@@ -70,7 +70,7 @@ function About() {
             initial={{ x: -100, opacity: 0 }} 
             exit={{x : '300vw' , transition : {ease  : 'circInOut'}}}
             className="w-1/2 h-fit">
-              <motion.p className="text-balance  lg:leading-7 text-slate-500 text-sm lg:text-[50px] text-start lg:p-3 para-font">
+              <motion.p className="text-balance border lg:leading-7 text-slate-500 text-base lg:text-[50px] text-start lg:p-3 para-font">
                 The Computer Science Department is proud to present Inspire 2k24, an exciting intra-departmental
                 fest designed to ignite creativity, foster innovation, and challenge the technical wits of students. Inspire isn't just a festival—it’s a platform for growth, experimentation, and skill development, where students can step beyond the classroom to experience the thrill of competitive learning.
                 <br />
@@ -96,7 +96,7 @@ function About() {
         {/* Right Content Section */}
         {click && (<motion.div ref={box2} className="w-full h-1/2 flex flex-row justify-end items-center gap-12 px-3 lg:px-10 "> 
             <motion.div initial={{ x: 100, opacity: 0 }} exit={{x : '-300vw'}} id="para-2" className="w-1/2 h-fit">
-              <motion.p className="text-balance lg:leading-8 text-slate-500 text-sm lg:text-[50px] text-end lg:p-3 para-font">
+              <motion.p className="text-balance lg:leading-8 text-slate-500 text-base lg:text-[50px] text-end lg:p-3 para-font">
                 Inspire 2k24 is more than just a competition—it’s an incubator for ideas and an opportunity to build connections with other budding technologists. Every event is carefully curated to test critical thinking, analytical abilities, and technical skills, ensuring that participants leave with not just trophies but valuable insights and a refined skillset.
                 <br />
                 So gear up for an exhilarating experience at Inspire 2k24—a festival that celebrates the spirit of

@@ -70,7 +70,7 @@ function About() {
             initial={{ x: -100, opacity: 0 }} 
             exit={{x : '300vw' , transition : {ease  : 'circInOut'}}}
             className="w-1/2 h-fit">
-              <motion.p className="text-balance border lg:leading-7 text-slate-500 text-base lg:text-[50px] text-start lg:p-3 para-font">
+              <motion.p className="text-pretty lg:leading-7 text-slate-500 text-base lg:text-[50px] text-start lg:p-3 para-font">
                 The Computer Science Department is proud to present Inspire 2k24, an exciting intra-departmental
                 fest designed to ignite creativity, foster innovation, and challenge the technical wits of students. Inspire isn't just a festival—it’s a platform for growth, experimentation, and skill development, where students can step beyond the classroom to experience the thrill of competitive learning.
                 <br />

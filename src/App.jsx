@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './pages/Hero'
+import House from './components/House'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
 import Events from './pages/Events'
@@ -16,7 +17,7 @@ function App() {
         <Navbar />
         <AnimatePresence mode='wait'>
           <Routes location={location} key={location.pathname}>
-              <Route path='/' element={<Hero />} />
+              <Route path='/' element={<House />} />
               <Route path='/gallery' element={<Gallery />}/>
               <Route path='/about' element={<About />}/>
               <Route path='/events' element={<Events />}/>

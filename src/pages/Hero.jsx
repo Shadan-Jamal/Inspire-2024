@@ -106,6 +106,7 @@ function Hero() {
         </div>
       </div>}
     </motion.section>
+    
     {!isPresent && <motion.div
       initial={{display : 'none'}}
       animate={{display : 'block'}}

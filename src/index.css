@@ -16,6 +16,13 @@
     font-style: oblique;
 }
 
+@font-face {
+    font-family: 'Ravenscroft';
+    src: url('./fonts/Ravenscroft.ttf');
+    font-weight: lighter;
+    font-style: oblique;
+}
+
 .header-font{
     font-family : 'Traxtor',sans-serif ;
     font-style: normal;
@@ -23,6 +30,10 @@
 
 .para-font{
     font-family: 'Stranger';
+}
+
+.events-font{
+    font-family: 'Ravenscroft';
 }
 
 body{

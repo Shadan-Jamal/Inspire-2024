@@ -30,7 +30,7 @@ const Events = () => {
 
                 {/* Showing Selected Event */}
                 {eventInfo[0].rules.length > 1 ? eventInfo.map((item,index) => {
-                  return <motion.div key={index} className='events-font flex flex-col justify-around md:justify-between items-start w-full h-full md:h-[60%] py-5 border-rose-500 px-2'>
+                  return <motion.div key={index} className='events-font flex flex-col justify-around md:justify-between items-start w-full h-full md:h-full py-5 border-rose-500 px-2'>
                     <motion.div
                     className='w-full h-fit  md:space-y-3 border-b-[2px] border-rose-500 pb-2 px-3 md:px-5'
                     >
@@ -42,14 +42,14 @@ const Events = () => {
 
                     <div className='w-fit max-h-fit px-2 md:mt-2'><h5 className='text-white text-3xl md:text-4xl text-start'>Rules</h5></div>
 
-                    <motion.div className='w-full max-h-[70%] flex flex-col md:flex-row justify-center items-start gap-5 py-2 md:py-1 px-2 border-b-[2px] border-b-rose-500'
+                    <motion.div className='w-full max-h-[70%] md:max-h-[60%] flex flex-col md:flex-row justify-center items-start gap-5 py-2 md:py-1 px-2 border-b-[2px] border-b-rose-500'
                     >
-                      <div className='w-full md:w-[80%] h-[80%] overflow-auto px-3 border-e-[2px] border-rose-500'>
+                      <div className='w-full md:w-[80%] h-[80%] md:h-full overflow-y-auto px-3 border-e-[2px] border-rose-500'>
                         <motion.p className='text-white text-xl md:text-3xl tracking-[2px] whitespace-pre-line'>
                           {item.rules}
                         </motion.p>
                       </div>
-                      <div className='w-full md:w-[20%] h-[20%]'>
+                      <div className='w-full md:w-[20%] h-[20%] md:h-full overflow-y-auto'>
                         <motion.button
                         onClick={() => setEventDetails({...eventDetails, seeCoordinators : !eventDetails.seeCoordinators})}
                         whileHover={{scale : 1.1, color : 'black', backgroundColor : 'white'}} 
@@ -61,7 +61,7 @@ const Events = () => {
                         initial={{opacity : 0}}
                         animate={{opacity : 1}}
                         transition={{duration : 0.5, type: 'tween'}}
-                        className={`text-white text-xl md:text-3xl md:whitespace-pre-line ${window.innerWidth < 500  && 'flex flex-row'} overflow-y-auto`}>
+                        className={`text-white text-xl md:text-3xl md:whitespace-pre-line ${window.innerWidth < 500  && 'flex flex-row'}`}>
                           {item.coordinators}
                         </motion.p>}
                       </div>

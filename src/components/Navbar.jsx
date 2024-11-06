@@ -189,7 +189,7 @@ function Navbar() {
                 <motion.div
                 initial={{x : '-100vw'}} exit={{x : '100vw'}} className='w-full h-[25%] flex justify-center items-center '>
                     <h2 className='text-red-600 text-3xl'>
-                    <NavLink to="/" onClick={() => openNav(false)}>
+                    <NavLink to="/events" onClick={() => openNav(false)}>
                         Events
                     </NavLink>
                     </h2>
@@ -198,7 +198,7 @@ function Navbar() {
                 <motion.div
                 initial={{x : '100vw'}} exit={{x : '-100vw'}} className='w-full h-[25%] flex justify-center items-center '>
                     <h2 className='text-red-700 text-3xl'>
-                    <NavLink to="/events" onClick={() => openNav(false)}>
+                    <NavLink to="/" onClick={() => openNav(false)}>
                         Registration
                     </NavLink>
                     </h2>

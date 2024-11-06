@@ -16,10 +16,10 @@ const Events = () => {
       setEventInfo(example)
   }
   return (
-    <div className='w-screen h-screen'>
+    <div className='w-screen h-[100dvh]'>
         <div id='hero-section' className='flex flex-row justify-center items-center w-full h-full pt-16 md:py-16 relative'>
             <motion.div
-            className={`${events ? 'md:w-[80%]' : 'md:w-[90%]'} w-full h-full bg-zinc-900 flex flex-row justify-center items-center rounded-xl transition-[width] border-[2px] border-rose-500 relative px-4`}>
+            className={`${events ? 'md:w-[80%]' : 'md:w-[90%]'} w-[95%] h-full bg-zinc-900 flex flex-row justify-center items-center rounded-xl transition-[width] border-[2px] border-rose-500 relative px-4 overflow-x-hidden`}>
                 <motion.div
                   onClick={() => viewEvents(!events)}
                   whileTap={{scale : 1.2}}
@@ -96,7 +96,8 @@ const Events = () => {
             initial={{x : "100%"}}
             animate={{x : 0}}
             exit={{x : "100%"}}
-            transition={{ease : 'circIn', duration : 0.2}}
+            transition={{ease : 'anticipate', duration : 0.2}}
+            style={{scrollbarWidth : '1px', scrollbarColor : "red"}}
             className={`w-[80%] md:w-[30%] md:max-h-fit md:h-full bg-zinc-200 rounded-xl absolute bottom-0 py-3 flex flex-row overflow-x-scroll md:static md:flex md:flex-col md:justify-center md:items-center`}>
               {EventsSideBar.map((item,index) => {
                 return <motion.div

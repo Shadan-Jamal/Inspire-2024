@@ -40,6 +40,7 @@ const Events = () => {
                       </div>
                       <span className='text-3xl text-white'>{item.timing}</span>
                     </motion.div>
+                    
                     <motion.div
                     className='col-span-2 w-full h-1/2 border'
                     >

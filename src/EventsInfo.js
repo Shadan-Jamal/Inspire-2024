@@ -1,6 +1,6 @@
 export const EventsInfo =[
     {
-        heading : 'Coding and Debugging',
+        heading : 'Coding',
         timing : '11:00 AM to 1:00 PM',
         rules : `A total of two round will be there. 
                 - First round is an online quiz of 20 mins. A total of 20 questions will be given with 1 min per question.

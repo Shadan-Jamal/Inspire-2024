@@ -12,7 +12,7 @@ import React from "react";
 
 export const EventsSideBar = [
     {
-        icon : React.createElement(PiBracketsCurlyLight,{ color : "red" , size : '40px'}),
+        icon : React.createElement(PiBracketsCurlyLight,{ color : "red" , size : '40px', className : ''}),
         name : 'Coding'
     },
     {

@@ -36,7 +36,7 @@ function About() {
     initial={{opacity : 0}}
     animate={{opacity : 1}}
     transition={{duration : 2}}
-    className="w-[100vw] h-screen grid grid-rows-4 place-content-center gap-24 lg:px-10">
+    className="w-[100vw] h-screen grid grid-rows-4 place-content-center gap-24 lg:px-10 backdrop-blur-lg">
       {/* Header Section */}
       <motion.div 
       exit={{scale : 0}}

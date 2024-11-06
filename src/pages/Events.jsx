@@ -13,8 +13,6 @@ const Events = () => {
       const example = EventsInfo.filter((item,index) => {
         return index === eventIndex;
       })
-      const {heading, timing, rules, coordinators, numbers} = example[0];
-      // console.log(example)
       setEventInfo(example)
   }
   console.log(eventInfo[0])
@@ -22,7 +20,7 @@ const Events = () => {
     <div className='w-screen h-screen'>
         <div id='hero-section' className='flex flex-row justify-center items-center w-full h-full py-20 relative'>
             <motion.div
-            className={`${events ? 'w-[90%]' : 'w-[80%]'} h-full bg-zinc-900 flex flex-row justify-center items-center rounded-xl transition-[width] border-[2px] border-rose-500 relative`}>
+            className={`${events ? 'w-[90%]' : 'w-[80%]'} h-full bg-zinc-900 flex flex-row justify-center items-center rounded-xl transition-[width] border-[2px] border-rose-500 relative px-8`}>
                 <motion.div
                   onClick={() => viewEvents(!events)}
                   whileTap={{scale : 1.2}}
@@ -30,8 +28,31 @@ const Events = () => {
                   className='absolute top-5 right-5 bg-black rounded-full px-4 py-1 text-white events-font tracking-widest'>
                     <button className='text-xl'>{!events ? 'View Events' : 'Close'}</button>
                 </motion.div>
+
+                {/* Showing Selected Event */}
                 {eventInfo.map((item,index) => {
-                  return <motion.div key={index} className='text-white text-6xl events-font'>{item.heading}
+                  return <motion.div key={index} className='events-font grid grid-cols-2 w-full h-full py-5'>
+                    <motion.div
+                    className='col-span-2 border h-fit space-y-3'
+                    >
+                      <div className=''>
+                      <h1 className='text-6xl text-white tracking-widest'>{item.heading}</h1>
+                      </div>
+                      <span className='text-3xl text-white'>{item.timing}</span>
+                    </motion.div>
+                    <motion.div
+                    className='col-span-2 w-full h-1/2 border'
+                    >
+                      <div className='border'>
+                        {item.rules}
+                      </div>
+                      <div className='borde'>
+                        {item.coordinators}
+                      </div>
+                    </motion.div>
+                    <motion.div className='border'>
+                      {item.numbers}
+                    </motion.div>
                   </motion.div>
                 })}
             </motion.div>

@@ -44,7 +44,7 @@ function Navbar() {
             {click && <motion.div
             className='flex flex-row justify-end items-center gap-5 overflow-hidden header-font text-2xl'>
                     <NavLink to={"/"}>
-                        <motion.a
+                        <motion.p
                         to="/"
                         onMouseEnter={() => setHovering({...hovering,link1 : true})}
                         onMouseLeave={() => setHovering({...hovering,link1 : false})}
@@ -59,11 +59,11 @@ function Navbar() {
                         animate={{width : `${hovering.link1 ? "100%" : 0}`}}
                         exit={{width : 0}}
                         className={`h-[2px] bg-[#ff4d00]`}></motion.span>
-                        </motion.a>
+                        </motion.p>
                     </NavLink>
                     
                     <NavLink to={"/gallery"}>
-                        <motion.a 
+                        <motion.p 
                         to="/gallery"
                         onMouseEnter={() => setHovering({...hovering,link2 : true})}
                         onMouseLeave={() => setHovering({...hovering,link2 : false})}
@@ -78,11 +78,11 @@ function Navbar() {
                         animate={{width : `${hovering.link2 ? "100%" : 0}`}}
                         exit={{width : 0}}
                         className={`h-[2px] bg-[#ff4d00]`}></motion.span>
-                        </motion.a>
+                        </motion.p>
                     </NavLink>
 
                     <NavLink to="/about">
-                    <motion.a
+                    <motion.p
                     onMouseEnter={() => setHovering({...hovering,link3 : true})}
                     onMouseLeave={() => setHovering({...hovering,link3 : false})}
                     className='hover flex flex-col'                    initial={{y : 100}}
@@ -95,11 +95,11 @@ function Navbar() {
                     animate={{width : `${hovering.link3 ? "100%" : 0}`}}
                     exit={{width : 0}}
                     className={`h-[2px] bg-[#ff4d00]`}></motion.span>
-                    </motion.a>
+                    </motion.p>
                     </NavLink>
 
                     <NavLink to={"/events"}>
-                    <motion.a 
+                    <motion.p 
                     onMouseEnter={() => setHovering({...hovering,link4 : true})}
                     onMouseLeave={() => setHovering({...hovering,link4 : false})}
                     href=""
@@ -113,7 +113,7 @@ function Navbar() {
                     animate={{width : `${hovering.link4 ? "100%" : 0}`}}
                     exit={{width : 0}}
                     className={`h-[2px] bg-[#ff4d00]`}></motion.span>
-                    </motion.a>
+                    </motion.p>
                     </NavLink>
 
                     <NavLink to={"/"}>

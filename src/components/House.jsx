@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import $ from 'jquery';
 import 'tailwindcss/tailwind.css';
-import About from "../pages/About"
+import About from "../pages/About";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Inspire2K24 = () => {
+const House = () => {
   useEffect(() => {
-    // GSAP animation
-    gsap.timeline({
+    // GSAP animation with ScrollTrigger
+    const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.wrapper',
         start: 'top top',
@@ -19,34 +18,45 @@ const Inspire2K24 = () => {
         scrub: true,
         markers: false,
       },
-    })
+    });
+
+    timeline
       .to('img', {
         scale: 2,
         z: 250,
         transformOrigin: 'center center',
         ease: 'power1.inOut',
       })
-      .to('.hero-section', {
-        scale: 1.4,
-        transformOrigin: 'center center',
-        ease: 'power1.inOut',
-      }, '<');
+      .to(
+        '.hero-section',
+        {
+          scale: 1.4,
+          transformOrigin: 'center center',
+          ease: 'power1.inOut',
+        },
+        '<'
+      );
 
-    // jQuery for darkening background on scroll
-    $(document).ready(function () {
-      $.fn.darkenScroll = function () {
-        var elem = $(this);
-        $(window).on('scroll', function () {
-          let scroll = $(document).scrollTop();
-          let offsetTop = elem.offset().top + elem.outerHeight();
-          let opacity = 1 / offsetTop * scroll;
-          if (opacity > 0 && opacity < 1) {
-            elem.css({ 'box-shadow': `10000px 0 0 0 rgba(0,0,0,${opacity}) inset`});
-          }
-        });
-      };
-      $('.wrapper').darkenScroll();
-    });
+    // Function to darken background on scroll
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const elem = document.querySelector('.wrapper');
+      const offsetTop = elem.offsetTop + elem.offsetHeight;
+      const opacity = Math.min(1, scrollTop / offsetTop);
+
+      elem.style.boxShadow = `10000px 0 0 0 rgba(0, 0, 0, ${opacity}) inset`;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Cleanup function to kill ScrollTrigger and remove event listeners on unmount
+    return () => {
+      if (timeline) {
+        timeline.kill();
+      }
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
@@ -57,7 +67,10 @@ const Inspire2K24 = () => {
           <h1 className="text-3xl header-font text-red-600 tracking-widest shadow-2xl">Inspiring you to something</h1>
         </div>
         <div className="content overflow-hidden">
-          <section className="section hero-section w-full h-screen bg-cover bg-center bg-no-repeat mix-blend-darken" style={{ backgroundImage: 'url("/HOUSE.jpeg")'}}></section>
+          <section
+            className="section hero-section w-full h-screen bg-cover bg-center bg-no-repeat mix-blend-darken"
+            style={{ backgroundImage: 'url("/HOUSE.jpeg")' }}
+          ></section>
           {/* <section className="section gradient-purple w-full h-[50vh]"></section> */}
         </div>
         <div className="image-container absolute top-0 left-0 right-0 w-full h-screen -z-50">
@@ -69,4 +82,4 @@ const Inspire2K24 = () => {
   );
 };
 
-export default Inspire2K24;
+export default House;

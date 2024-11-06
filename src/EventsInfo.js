@@ -8,37 +8,45 @@ export const EventsInfo =[
                 - The second round will be conducted on Hackerrank so make sure that you create a Hackerrank account prior to the event.
                 - A single group can have a maximum of 2 participants.
                 Note - A total of two teams per alloted team can come for the event.`,
-        coordinators : `Shadan Jamal, Neelu Singh, Ritesh Sanjay Kulkarni, Mohammed Parveez`,
-        numbers : `-8303501819
-                   -8197770112`
+        coordinators : `Shadan Jamal 
+                        Neelu Singh
+                        Ritesh Sanjay Kulkarni 
+                        Mohammed Parveez`,
+        numbers : `8303501819
+                   8197770112`
     },
     {
         heading : 'Debate',
         timing : '11:00 AM to 1:00 PM',
-        rules : `1.	 Four members per Team
+        rules : `1. Four members per Team
                 2.	It consists of Three Rounds.
                 3.	 Timings to speak is 3+1 min (includes the questionary session from judges)
                 4.	 Each time there is a Buzzer after 3 Mins of Time
                 5.	No carrying any Electronic Devices only Paper and Pen are allowed.
                 6.	 Interdisciplinary Activities are  Not Enternainted.
                  7. Topics mainly focused on Current Affairs, IT, and Controversial Topics.`,
-        coordinators : `Aman Kumar Singh, Prem Kumar Choudhary, Nikitha Anne Pinto, P. Pallavi`,
-        numbers : `-7483732301,
-                   -9019866473`
+        coordinators : `Aman Kumar Singh 
+                        Prem Kumar Choudhary 
+                        Nikitha Anne Pinto
+                        P. Pallavi`,
+        numbers : `7483732301,
+                   9019866473`
     },
     {
         heading : 'Face Painting',
         timing : '9:30 AM to 10:30 PM',
         rules : `Theme: Horror
                 Time limit: 1 and half hour
-                Rules:
                 The Participants must bring all of the essential materials .
                 No using any devices for reference.
                 Only the Participant  doing the artwork will be awarded.
                 The Participant can bring a person along with them for painting.`,
-        coordinators : `Mariya Carol G., Anitha E., Tarunika T., Varshitha P. S.`,
-        numbers : `-8073018916
-                   -9900448371`
+        coordinators : `Mariya Carol G. 
+                        Anitha E. 
+                        Tarunika T.
+                        Varshitha P.S.`,
+        numbers : `8073018916
+                   9900448371`
     },
     {
         heading : 'Fashion Walk',
@@ -49,9 +57,13 @@ export const EventsInfo =[
                 • Submit the audio to the coordinator 2 hours before the event (late submission in the audio will lead to disqualification).
                 • Marks will be deducted on exceeding time limit or exceeding number of participants
                 •Vulgarity is strongly prohibited. Any form of obscenity will lead to debarring the team from the contest`,
-        coordinators : `Monika A.A, Mohammed Zaki Ulla, Sheetal Sahani, Saniya S., Anushree R.`,
-        numbers : `-7483343881
-                   -6361216997`
+        coordinators : `Monika A.A 
+                        Mohammed Zaki Ulla
+                        Sheetal Sahani
+                        Saniya S.
+                        Anushree R.`,
+        numbers : `7483343881
+                   6361216997`
     },
     {
         heading : 'Gaming',
@@ -63,23 +75,46 @@ export const EventsInfo =[
                 3. No in-game gears can be used.
                 4. Judges decision is final.
                 5. Any kind of booting/cheats/hacks will lead to disqualification.`,
-        coordinators : `Juwal Jackson, Vikash Prajapath, Hemanth Kumar S., S. Harish, Jyothi Swaroop S.K.`,
-        numbers : `-8088606547
-                   -8050387922`
+        coordinators : `Juwal Jackson 
+                        Vikash Prajapath
+                        Hemanth Kumar S.
+                        S. Harish
+                        Jyothi Swaroop S.K.`,
+        numbers : `8088606547
+                   8050387922`
     },
     {
         heading : 'IT Manager',
         timing : '9:30 AM to 1:00 PM',
-        rules : ``,
-        coordinators : `S. Harish, Saniya S.`,
-        numbers : `-9341701343
-                   -8050387922`
+        rules : `* Individual participation.
+                * Maximum 3 Students from one team can participate
+
+                ROUND 1- APTITUDE TEST
+                Rules: 
+                The participants will get 45 mins to complete the aptitude test. 
+                It will be a MCQ type question paper. No negative marking is included.
+
+                ROUND 2- DEBATE
+                Rules: 
+                The qualified students in this round will be asked to speak for/against the given topic.
+                Time: 2 minutes to present + 3 minutes for faceoff.
+                No personal remarks/target/comments will be tolerated.
+                Judges decision will be final.
+
+                ROUND 3- STRESS INTERVIEW
+                Rules:
+                This is the final round of IT Manager.
+                No personal and mean comments against any religion/caste/person will be tolerated.
+                Judges decision will be final.`,
+        coordinators : `S. Harish
+                        Saniya S.`,
+        numbers : `9341701343
+                   8050387922`
     },
     {
         heading : 'IT Quiz',
         timing : '9:30 AM to 10:30 PM',
-        rules : `General rules:
-                * Individual or a team of 2 members can participate.
+        rules : `* Individual or a team of 2 members can participate.
                 * The competition consists of 3 rounds.
                 * Topics: Computer Science, Hardware, Software, Networking, programming languages, recent trends (AI, ML, Data Science, etc...).
 
@@ -99,15 +134,22 @@ export const EventsInfo =[
                 * Correct answer by the first buzzer presser: +10 points.
                 * Incorrect or no answer by the first buzzer: -5 points.
                 * If the first team fails, the question moves to the second buzzer presser and so on with the same rules being followed.`,
-                coordinators : `P. Pallavi, Bency B., Vikash Ranwa, Prakash Patel`,
-                numbers : `-7483732301
-                           -7829138894`
+                coordinators : `P. Pallavi
+                                Bency B.
+                                Vikash Ranwa
+                                Prakash Patel`,
+                numbers : `7483732301
+                           7829138894`
     },
     {
         heading : 'Photography',
         timing : '9:30 AM to 1:00 PM',
-        rules : '',
-        coordinators : `Rohith G., Govind Kumawat B., Aaron Sachin Naik`
+        rules : ``,
+        coordinators : `Rohith G. 
+                        Govind Kumawat B.
+                        Aaron Sachin Naik`,
+        numbers : `9448519233
+                   7676931149`
     },
     {
         heading : 'Data Analytics',
@@ -128,15 +170,17 @@ export const EventsInfo =[
                 * Tools Allowed: Python, Microsoft Excel, and Power BI.
                 * Judging Criteria: Quality of analysis, visualization, and presentation.
                 * Total time: 40 - 60 minutes.`,
-        coordinators : `Vikash Ranwa, Ashwini Suresh, Thanushree K.G., Nagalakshmi J.`,
-        numbers : `-7022823972
-                   -7010573711`
+        coordinators : `Vikash Ranwa
+                        Ashwini Suresh
+                        Thanushree K.G.
+                        Nagalakshmi J.`,
+        numbers : `7022823972
+                   7010573711`
     },
     {
         heading : 'Treasure Hunt',
         timing : '9:30 AM to 1:00 PM',
-        rules : `General rules:
-                * A team of 5 members can participate.
+        rules : `* A team of 5 members can participate.
                 * The competition consists of 3 rounds.
                 * Topics: Horror, Computer Science, programming languages, General Knowledge 
 
@@ -152,8 +196,18 @@ export const EventsInfo =[
                 Round 3: Game (treasure hunt)
                 *Set of Clues will be Given on Spot.
                 *Team must decode the Clues given and Find the Next Clue Until final  Key is Found.`,
-        coordinators : ``,
-        numbers : `-8217887156
-                   -7019545251`
+        coordinators : `Albin 
+                        Jagadeesh 
+                        Riniya
+                        Ashitha
+                        Bhoomika
+                        Mounitha 
+                        Khushi
+                        Ayesha
+                        Irfan 
+                        Zaki 
+`,
+        numbers : `8217887156
+                   7019545251`
     },
 ]

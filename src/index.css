@@ -68,3 +68,25 @@ body{
     backdrop-filter: blur(20px);
     transition: backdrop-filter 1500ms ease-in-out;
 } */
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ebebff #372f2f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #372f2f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ebebff;
+    border-radius: 24px;
+    border: 3px solid #ffffff;
+  }

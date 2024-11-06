@@ -41,7 +41,7 @@ function About() {
       <motion.div 
       exit={{scale : 0}}
       transition={{duration : 0.5, type : 'keyframes'}}
-      className="w-full h-[25%] text-center row-span-1 flex flex-col justify-center items-center mt-24">
+      className="w-full h-fit text-center row-span-1 flex flex-col justify-center items-center mt-20 ">
         <h1 className="header-font text-red-600 text-[50px] lg:text-[70px]">About</h1>
         <motion.div
         initial={{width:0}}
@@ -56,7 +56,7 @@ function About() {
       <div className="mt-8 row-span-3 w-screen h-[75%] flex flex-col justify-evenly items-center gap-10 lg:px-6 relative">
         {/* Left Content Section */}
         {click && (<motion.div ref={box1}
-        className="w-full h-1/2 flex flex-row justify-end items-center px-3 lg:px-6 gap-10 border">
+        className="w-full h-1/2 flex flex-row justify-end items-center px-3 lg:px-6 gap-10 ">
             <motion.div
               id="img-1"
               initial={{ x: 100, opacity: 0 }}

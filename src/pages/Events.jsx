@@ -2,13 +2,25 @@ import React, { useRef, useState } from 'react'
 import { EventsSideBar } from '../EventsSideBar';
 import { EventsInfo } from '../EventsInfo';
 import { motion,AnimatePresence } from 'framer-motion'
+import { p } from 'framer-motion/client';
 
 const Events = () => {
   const [events,viewEvents] = useState(false);
-  const eventIndex = useRef(-1);
+  const [eventInfo, setEventInfo] = useState([{heading : ``, timing : ``,rules : ``, coordinators : ``, numbers : ``}]);
+
+  const eventSelect = (index) => {
+      const eventIndex = index;
+      const example = EventsInfo.filter((item,index) => {
+        return index === eventIndex;
+      })
+      const {heading, timing, rules, coordinators, numbers} = example[0];
+      // console.log(example)
+      setEventInfo(example)
+  }
+  console.log(eventInfo[0])
   return (
     <div className='w-screen h-screen'>
-        <div id='hero-section' className='flex flex-row justify-center items-center w-full h-full py-14 relative'>
+        <div id='hero-section' className='flex flex-row justify-center items-center w-full h-full py-20 relative'>
             <motion.div
             className={`${events ? 'w-[90%]' : 'w-[80%]'} h-full bg-zinc-900 flex flex-row justify-center items-center rounded-xl transition-[width] border-[2px] border-rose-500 relative`}>
                 <motion.div
@@ -18,11 +30,10 @@ const Events = () => {
                   className='absolute top-5 right-5 bg-black rounded-full px-4 py-1 text-white events-font tracking-widest'>
                     <button className='text-xl'>{!events ? 'View Events' : 'Close'}</button>
                 </motion.div>
-                {/* {EventsInfo.filter((item,index) => {
-                  return <motion.div>
-                    <p>{item === eventIndex.current}</p>
+                {eventInfo.map((item,index) => {
+                  return <motion.div key={index} className='text-white text-6xl events-font'>{item.heading}
                   </motion.div>
-                })} */}
+                })}
             </motion.div>
 
             <AnimatePresence>
@@ -35,8 +46,7 @@ const Events = () => {
               {EventsSideBar.map((item,index) => {
                 return <motion.div
                 key={index}
-                ref={eventIndex}
-                onClick={() => eventIndex.current = index}
+                onClick={() => eventSelect(index)}
                 whileHover={{backgroundColor : 'black', color : 'white', scale : 1.1, originX : 0}}
                 whileTap={{backgroundColor : 'black', color : 'white', scale : 1.2, originX : 0}}
                 className='w-full h-fit flex justify-start items-center gap-6 border-b-[1px] border-black px-3 hover:cursor-pointer'

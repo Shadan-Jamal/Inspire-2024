@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import Hero from './pages/Hero'
+// import Hero from './pages/Hero'
 import House from './components/House'
 import About from './pages/About'
 import Gallery from './pages/Gallery'

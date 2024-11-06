@@ -16,10 +16,7 @@ function Navbar() {
     const [nav,openNav] = useState(false);
 
     const navClicked = () => {
-        console.log(window.innerWidth)
         if(window.innerWidth >= 800){
-            console.log(window.innerWidth)
-            console.log("running inside setclick")
             setClick(!click);
         }
         else if(window.innerWidth < 800){
@@ -36,7 +33,7 @@ function Navbar() {
   return (<>
   <motion.div 
     id='navbar'
-    className='fixed top-0 w-screen h-16 lg:px-10 flex flex-row justify-around items-center text-white z-20 px-10'>
+    className='fixed top-0 w-screen h-16 lg:px-10 flex flex-row justify-around items-center text-white z-20 px-10 backdrop-blur-md'>
         <div 
         className={`justify-self-start w-[50%] lg:w-[25%] header-font text-[30px] `}>
             <h1>Inspire</h1>

@@ -17,12 +17,6 @@ const ImageSlider = () => {
     });
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-
-    },3000)
-  },[])
-
   return (
     <main className="bg-black h-screen w-screen">
       <motion.section 
@@ -45,7 +39,7 @@ const ImageSlider = () => {
         {/* Sliding Images Section */}
         <div
           id="slide-path"
-          className="absolute lg:start-1/4 bottom-0 z-20 w-full lg:w-6/12 overflow-hidden border-4 border-black"
+          className="absolute lg:start-1/4 bottom-0 z-20 w-full lg:w-6/12 overflow-hidden"
         >
           <div
             id="sliding-images"
@@ -57,7 +51,7 @@ const ImageSlider = () => {
                 key={`img-${index}`}
                 loading='lazy'
                 src={`./Images/${(index) + 1}.jpg`}
-                className="w-5 lg:w-20 h-32 object-cover rounded-md images opacity-50 lg:hover:w-[208px] transition-[width,brightness] duration-500 ease-in-out"
+                className="w-5 lg:w-20 h-32 object-cover rounded-md images opacity-50 lg:hover:w-[208px] "
                 onClick={handleImageClick}
                 onTouchEnd={handleImageClick}
               />

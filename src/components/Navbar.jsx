@@ -10,6 +10,7 @@ function Navbar() {
         link4: false,
         link5: false,
         link6: false,
+        link7: false,
     });
     const [click,setClick] = useState(false);
     const [navScope,navAnimate] = useAnimate();
@@ -33,7 +34,7 @@ function Navbar() {
   return (<>
   <motion.div 
     id='navbar'
-    className='fixed top-0 w-screen h-16 lg:px-10 flex flex-row justify-around items-center text-white z-20 px-10 backdrop-blur-md'>
+    className='fixed top-0 w-screen h-16 lg:px-10 flex flex-row justify-around items-center text-white z-20 px-10 backdrop-blur-sm landscape:h-12 landscape:md:h-16'>
         <div 
         className={`justify-self-start w-[50%] lg:w-[25%] header-font text-[30px] `}>
             <h1>Inspire</h1>
@@ -81,7 +82,7 @@ function Navbar() {
                         </motion.p>
                     </NavLink>
 
-                    <NavLink to="/about">
+                    {/* <NavLink to="/about">
                     <motion.p
                     onMouseEnter={() => setHovering({...hovering,link3 : true})}
                     onMouseLeave={() => setHovering({...hovering,link3 : false})}
@@ -96,7 +97,7 @@ function Navbar() {
                     exit={{width : 0}}
                     className={`h-[2px] bg-[#ff4d00]`}></motion.span>
                     </motion.p>
-                    </NavLink>
+                    </NavLink> */}
 
                     <NavLink to={"/events"}>
                     <motion.p 
@@ -116,7 +117,6 @@ function Navbar() {
                     </motion.p>
                     </NavLink>
 
-                    <NavLink to={"/"}>
                     <motion.a 
                     onMouseEnter={() => setHovering({...hovering,link6 : true})}
                     onMouseLeave={() => setHovering({...hovering,link6 : false})}
@@ -132,7 +132,23 @@ function Navbar() {
                     exit={{width : 0}}
                     className={`h-[2px] bg-[#ff4d00]`}></motion.span>
                     </motion.a>
-                    </NavLink>
+
+                    <motion.a
+                    download 
+                    onMouseEnter={() => setHovering({...hovering,link7 : true})}
+                    onMouseLeave={() => setHovering({...hovering,link7 : false})}
+                    className='hover flex flex-col'                    href="/TEAMS_INSPIRE.xlsx"
+                    initial={{y : 100}}
+                    animate={{y: 0}}
+                    exit={{y : 100}}
+                    transition={{ease: 'easeInOut' , delay : 1.1, duration : 0.1, type : 'spring', stiffness : 40}}
+                    >Download Teams
+                    <motion.span 
+                    initial={{width : 0}}
+                    animate={{width : `${hovering.link7 ? "100%" : 0}`}}
+                    exit={{width : 0}}
+                    className={`h-[2px] bg-[#ff4d00]`}></motion.span>
+                    </motion.a>
             </motion.div>}  
             </AnimatePresence>
         </div>}    
@@ -202,7 +218,18 @@ function Navbar() {
                         Registration
                     </NavLink>
                     </h2>
-                </motion.div></>}
+                </motion.div>
+                <motion.div
+                initial={{x : '100vw'}} exit={{x : '-100vw'}} className='w-full h-[25%] flex justify-center items-center '>
+                    <h2 className='text-red-700 text-3xl'>
+                    <a href='/TEAMS_INSPIRE.xlsx' download>
+                        Download Teams
+                    </a>
+                    </h2>
+                </motion.div>
+                
+                </>
+                }
             </AnimatePresence>
         </motion.div>
     </div>}

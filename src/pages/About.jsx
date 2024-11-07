@@ -17,7 +17,7 @@ function About() {
 
     await animate(
       scope.current,
-      { rotate: 90, width: `${window.innerWidth < 600 ? '70%' : '35%'}`, height : 1, padding : 0},
+      { rotate: 90, width: `${window.innerWidth < 600 ? '50%' : '25%'}`, height : 1, padding : 0},
       { delay : 0.1, duration: 0.7, ease: 'circOut'}
     );
 
@@ -36,7 +36,7 @@ function About() {
     initial={{opacity : 0}}
     animate={{opacity : 1}}
     transition={{duration : 2}}
-    className="w-[100vw] h-screen grid grid-rows-4 place-content-center gap-24 lg:px-10 backdrop-blur-lg">
+    className="w-[100vw] h-screen grid grid-rows-4 place-content-center gap-24 lg:px-10 bg-black">
       {/* Header Section */}
       <motion.div 
       exit={{scale : 0}}

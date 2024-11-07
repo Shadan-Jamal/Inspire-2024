@@ -144,7 +144,10 @@ export const EventsInfo =[
     {
         heading : 'Photography',
         timing : '9:30 AM to 1:00 PM',
-        rules : ``,
+        rules : `Open for all (One photo per person).
+                 Topic will be given on the day of the event.
+                 Photos are not supposed to be edited.
+                 The drive link to upload will be active on the day of the event.`,
         coordinators : `Rohith G. 
                         Govind Kumawat B.
                         Aaron Sachin Naik`,

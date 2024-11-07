@@ -15,6 +15,13 @@ const Events = () => {
       })
       setEventInfo(example)
   }
+
+  const load = window.addEventListener("DOMContentLoaded" , () => {
+    return <motion.div className='w-20 h-20'>
+              <p className='text-5xl text-white'>Swipe to see the events</p>
+            </motion.div>
+  })
+
   return (
     <div className='w-screen h-[100dvh]'>
         <div id='hero-section' className='flex flex-row justify-center items-center w-full h-full pt-16 md:py-16 relative'>
@@ -30,7 +37,7 @@ const Events = () => {
 
                 {/* Showing Selected Event */}
                 {eventInfo[0].rules.length > 1 ? eventInfo.map((item,index) => {
-                  return <motion.div key={index} className='events-font flex flex-col justify-around md:justify-between items-start w-full h-full md:h-full py-5 border-rose-500 px-2'>
+                  return <motion.div key={index} className='events-font flex flex-col justify-around md:justify-around items-start w-full h-full md:h-full py-5 border-rose-500 px-2'>
                     <motion.div
                     className='w-full h-fit  md:space-y-3 border-b-[2px] border-rose-500 pb-2 px-3 md:px-5'
                     >
@@ -42,9 +49,9 @@ const Events = () => {
 
                     <div className='w-fit max-h-fit px-2 md:mt-2'><h5 className='text-white text-3xl md:text-4xl text-start'>Rules</h5></div>
 
-                    <motion.div className='w-full max-h-[70%] md:max-h-[60%] flex flex-col md:flex-row justify-center items-start gap-5 py-2 md:py-1 px-2 border-b-[2px] border-b-rose-500'
+                    <motion.div className='w-full md:grow max-h-[70%] md:max-h-[60%] flex flex-col md:flex-row justify-center items-start gap-5 py-2 md:py-1 px-2 border-b-[2px] border-b-rose-500 overflow-y-auto'
                     >
-                      <div className='w-full md:w-[80%] h-[80%] md:h-full overflow-y-auto px-3 border-e-[2px] border-rose-500'>
+                      <div className='w-full md:w-[80%] h-[80%] md:h-full px-3 border-e-[2px] border-rose-500 overflow-y-auto'>
                         <motion.p className='text-white text-xl md:text-3xl tracking-[2px] whitespace-pre-line'>
                           {item.rules}
                         </motion.p>
@@ -68,9 +75,9 @@ const Events = () => {
                     </motion.div>
 
                     <motion.div 
+                    className='w-fit h-fit mt-1 flex justify-start gap-3 '>
+                    <motion.button
                     onClick={() => setEventDetails({...eventDetails, seePhoneNumber : !eventDetails.seePhoneNumber})}
-                    className='w-full h-fit mt-1 flex justify-start gap-3 '>
-                    <motion.button 
                     whileHover={{scale : 1.1, color : 'black', backgroundColor : 'white'}} 
                     whileTap={{scale : 1.1, color : 'black', backgroundColor : 'white'}} 
                     className='px-2 py-1 rounded-2xl text-white bg-black text-xl tracking-wider'>Contact</motion.button>
@@ -98,7 +105,8 @@ const Events = () => {
             exit={{x : "100%"}}
             transition={{ease : 'anticipate', duration : 0.2}}
             style={{scrollbarWidth : '1px', scrollbarColor : "red"}}
-            className={`w-[80%] md:w-[30%] md:max-h-fit md:h-full bg-zinc-200 rounded-xl absolute bottom-0 py-3 flex flex-row overflow-x-scroll md:static md:flex md:flex-col md:justify-center md:items-center`}>
+            className={`w-[80%] md:w-[30%] md:max-h-fit md:h-full bg-zinc-200 rounded-xl absolute bottom-0 py-3 flex flex-row overflow-x-scroll md:overflow-x-hidden md:static md:flex md:flex-col md:justify-center md:items-center`}>
+              {}
               {EventsSideBar.map((item,index) => {
                 return <motion.div
                 key={index}

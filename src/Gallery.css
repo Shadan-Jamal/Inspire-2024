@@ -1,5 +1,5 @@
 /* App.css */
-#slide-path::before {
+/* #slide-path::before {
   content: "";
   position: absolute;
   padding: 0px 10px;
@@ -13,11 +13,11 @@
     rgba(255, 255, 255, 0),
     rgba(24, 23, 23, 0.673)
   );
-}
+} */
 
-#sliding-images {
+/* #sliding-images {
   animation: slide 34s linear infinite;
-}
+} 
 
 #sliding-images:hover {
   animation-play-state: paused;
@@ -25,7 +25,7 @@
 
 #sliding-images img {
   transition: width 500ms ease, brightness 500ms ease;
-}
+} 
 
 #sliding-images img:hover {
   opacity: 1;
@@ -72,8 +72,8 @@
   100% {
     transform: translateX(calc(-680px * 5));
   }
-}
-
+} */
+/* 
 @media (max-width: 800px) {
   #slide-path::before {
     width: 10px; 
@@ -104,4 +104,4 @@
       transform: translateX(calc(-1300px * 5));
     }
   }
-}
+} */

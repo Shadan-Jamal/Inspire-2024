@@ -117,10 +117,11 @@ function Navbar() {
                     </motion.p>
                     </NavLink>
 
-                    <motion.a 
+                    <motion.a
                     onMouseEnter={() => setHovering({...hovering,link6 : true})}
                     onMouseLeave={() => setHovering({...hovering,link6 : false})}
-                    className='hover flex flex-col'                    href=""
+                    className='hover flex flex-col'                    href="https://linktr.ee/shadow1470"
+                    target='_blank'
                     initial={{y : 100}}
                     animate={{y: 0}}
                     exit={{y : 100}}

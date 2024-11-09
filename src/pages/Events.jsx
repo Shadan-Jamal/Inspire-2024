@@ -7,6 +7,8 @@ const Events = () => {
   const [events,viewEvents] = useState(false);
   const [eventInfo, setEventInfo] = useState([{heading : ``, timing : ``,rules : ``, coordinators : ``, numbers : ``}]);
   const [eventDetails, setEventDetails] = useState({seeCoordinators : false, seePhoneNumber : false});
+  const add = useRef(null);
+
 
   const eventSelect = (index) => {
       const eventIndex = index;
@@ -15,12 +17,6 @@ const Events = () => {
       })
       setEventInfo(example)
   }
-
-  const load = window.addEventListener("DOMContentLoaded" , () => {
-    return <motion.div className='w-20 h-20'>
-              <p className='text-5xl text-white'>Swipe to see the events</p>
-            </motion.div>
-  })
 
   return (
     <div className='w-screen h-[100dvh]'>
@@ -61,7 +57,7 @@ const Events = () => {
                         onClick={() => setEventDetails({...eventDetails, seeCoordinators : !eventDetails.seeCoordinators})}
                         whileHover={{scale : 1.1, color : 'black', backgroundColor : 'white'}} 
                         whileTap={{scale : 1.1, color : 'black', backgroundColor : 'white'}} 
-                        className='px-1 py-1 md:px-2 md:py-2 rounded-xl text-white bg-black text-base md:text-xl tracking-wider'> Check Coordinators
+                        className='px-2 py-1 md:px-2 md:py-2 rounded-xl text-white bg-black text-base md:text-xl tracking-widest'> Check Coordinators
                         </motion.button>
 
                         {eventDetails.seeCoordinators && <motion.p 
@@ -97,16 +93,14 @@ const Events = () => {
                 }
 
             </motion.div>
-
+              
             <AnimatePresence>
             {events && <motion.div 
             initial={{x : "100%"}}
             animate={{x : 0}}
             exit={{x : "100%"}}
             transition={{ease : 'anticipate', duration : 0.2}}
-            style={{scrollbarWidth : '1px', scrollbarColor : "red"}}
-            className={`w-[80%] md:w-[30%] md:max-h-fit md:h-full bg-zinc-200 rounded-xl absolute bottom-0 py-3 flex flex-row overflow-x-scroll md:overflow-x-hidden md:static md:flex md:flex-col md:justify-center md:items-center`}>
-              {}
+            className={`w-[35%] md:w-[30%] h-fit md:max-h-fit md:h-full bg-zinc-200 rounded-xl absolute right-0 py-3 flex flex-col md:overflow-x-hidden md:static md:flex md:flex-col md:justify-center md:items-center`}>
               {EventsSideBar.map((item,index) => {
                 return <motion.div
                 key={index}
@@ -116,7 +110,7 @@ const Events = () => {
                 className='w-full h-fit flex flex-row md:flex-row justify-start items-center gap-2 md:gap-6 border-e-[1px] border-e-black md:border-b-[1px] md:border-black px-3 hover:cursor-pointer'
                 >
                   {item.icon}
-                  <p className='text-2xl md:text-5xl lg:text-6xl events-font tracking-wider text-start'>{item.name}</p>
+                  <p className='text-xl md:text-5xl lg:text-6xl events-font tracking-wider text-start'>{item.name}</p>
                 </motion.div>
               })}
             </motion.div>}

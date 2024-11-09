@@ -215,9 +215,9 @@ function Navbar() {
                 <motion.div
                 initial={{x : '100vw'}} exit={{x : '-100vw'}} className='w-full h-[25%] flex justify-center items-center '>
                     <h2 className='text-red-700 text-3xl'>
-                    <NavLink to="/" onClick={() => openNav(false)}>
+                    <a to="/" href='https://linktr.ee/shadow1470' target='_blank' onClick={() => openNav(false)}>
                         Registration
-                    </NavLink>
+                    </a>
                     </h2>
                 </motion.div>
                 <motion.div

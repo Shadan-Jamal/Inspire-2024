@@ -17,7 +17,7 @@ function About() {
 
     await animate(
       scope.current,
-      { rotate: 90, width: `${window.innerWidth < 600 ? '100%' : '25%'}`, height : 1, padding : 0},
+      { rotate: 90, width: `${window.innerWidth < 600 ? '50%' : '25%'}`, height : 1, padding : 0},
       { delay : 0.1, duration: 0.7, ease: 'circOut'}
     );
 
@@ -36,7 +36,7 @@ function About() {
     initial={{opacity : 0}}
     animate={{opacity : 1}}
     transition={{duration : 2}}
-    className="w-[100vw] h-screen grid grid-rows-4 place-content-center gap-24 lg:px-10 bg-black">
+    className="w-[100vw] h-screen grid grid-rows-4 place-content-center gap-24 lg:px-10 bg-black overflow-scroll">
       {/* Header Section */}
       <motion.div 
       exit={{scale : 0}}
@@ -53,10 +53,10 @@ function About() {
       </motion.div>
 
       {/* Content Section */}
-      <div className="mt-8 row-span-3 w-screen h-[75%] flex flex-col justify-evenly items-center gap-10 lg:px-6 relative">
+      <div className="row-span-3 w-screen h-fit flex flex-col justify-center md:justify-evenly items-center md:gap-10 g:px-6 relative">
         {/* Left Content Section */}
         {click && (<motion.div ref={box1}
-        className="w-full h-1/2 flex flex-row justify-end items-center px-3 lg:px-6 gap-10 ">
+        className="w-full h-1/2 flex flex-row justify-end items-center px-3 md:px-6 gap-10">
             <motion.div
               id="img-1"
               initial={{ x: 100, opacity: 0 }}
@@ -70,7 +70,7 @@ function About() {
             initial={{ x: -100, opacity: 0 }} 
             exit={{x : '300vw' , transition : {ease  : 'circInOut'}}}
             className="w-1/2 h-fit">
-              <motion.p className="text-pretty leading-6 md:leading-7 text-slate-500 text-xl text-[34px] md:text-[2.5vw] text-start lg:p-3 para-font">
+              <motion.p className="text-pretty leading-5 md:leading-7 text-slate-400 text-2xl md:text-[2.5vw] text-start lg:p-3 para-font">
                 The Computer Science Department is proud to present Inspire 2k24, an exciting intra-departmental
                 fest designed to ignite creativity, foster innovation, and challenge the technical wits of students. Inspire isn't just a festival—it’s a platform for growth, experimentation, and skill development, where students can step beyond the classroom to experience the thrill of competitive learning.
               </motion.p>
@@ -92,7 +92,7 @@ function About() {
         {/* Right Content Section */}
         {click && (<motion.div ref={box2} className="w-full h-1/2 flex flex-row justify-end items-center gap-12 px-3 md:px-10 "> 
             <motion.div initial={{ x: 100, opacity: 0 }} exit={{x : '-300vw'}} id="para-2" className="w-1/2 h-fit">
-              <motion.p className="text-balance leading-6 md:leading-8 text-slate-500 text-xl text-[34px] md:text-[2.5vw] text-end lg:p-3 para-font">
+              <motion.p className="text-pretty leading-5 md:leading-7 text-slate-400 text-2xl md:text-[2.5vw] text-end lg:p-3 para-font">
                 Events is carefully curated to test technical skills, innovative thinking, ensuring that participants leave with not just trophies but valuable insights and a refined skillset.
                 <br />
                 So gear up for an exhilarating experience at Inspire 2k24—a festival that celebrates the spirit of
